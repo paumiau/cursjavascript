@@ -7,31 +7,58 @@
 </head>
 <body>
     <script>
-       /* document.write(navigator.userAgent);
-        function veteaDisney(){
-            location.href="http://disney.com";
-        }
-        function veteaNetflix(){
-            location.href="http://netflix.com";
-        }
-        var edad=prompt("Indica tu edad");
+       // Escribir el Navegador por pantalla
+            function escribeNavegador(){
+                document.write(navigator.userAgent);
+            }
 
-        if (edad<18){
-            veteaDisney();
-        }else{
-            veteaNetflix();
-        }
-        function veteaDisney(){
-            location.href="http://disney.com";
-        }
-        function mensaje(){
-            alert("hola, subscribite a mi canal");
-        }
-        function atras(){
-            history.go(-1);
-        }
-        setInterval(atras,1000);*/
+       //Funciones de control de edad con Location.href
+            function veteaDisney(){
+                location.href="http://disney.com";
+            }
+            function veteaNetflix(){
+                location.href="http://netflix.com";
+            }
+            function compruebaEdad(){
+                var edad=prompt("Indica tu edad");
+                if (edad<18){
+                    veteaDisney();
+                }else{
+                    veteaNetflix();
+                }
+                function veteaDisney(){
+                    location.href="http://disney.com";
+                }
+            }
         
+        //pruebas con el setInterval y setTimeOut
+            function mensaje(){
+                alert("hola, subscribite a mi canal");
+            } 
+            function atras(){
+                history.go(-1);
+            }
+            function mensaje5segundos(){
+                setInterval(mensaje,5000);
+            }
+
+        // Eventos con onmouseover y con onclick
+            function canviacolor(){
+                var par3=document.getElementById("paragraf3");
+                par3.style.color="red";
+            }
+            function canviatexte(){
+                var par1=document.getElementById("paragraf2");
+                par1.innerHTML="Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis <strong>quisquam</strong> placeat aspernatur? Ut cupiditate quam quidem ex iure!";
+            }
+
+            function canviafondo(){
+                var red=parseInt(Math.random()*255);
+                var green=parseInt(Math.random()*255);
+                var blue=parseInt(Math.random()*255);
+                document.body.style.backgroundColor="rgb("+red+","+green+","+blue+")";
+            }
+
     </script>
     <button id="cositas" value="cambiame cositas">cambiame cositas</button>
     <p id="paragraf1">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis qui necessitatibus accusantium, tempora voluptatem harum placeat libero repellat? Eveniet nulla dicta architecto! Ab ipsam sequi eum quam, unde similique.</p>
@@ -44,29 +71,12 @@
     <p>Atque explicabo est sed eius amet veritatis illo obcaecati. Non, veritatis maiores iure doloribus labore praesentium similique! Quaerat voluptate sit unde nesciunt adipisci culpa sequi esse perspiciatis. Dignissimos, quasi veniam!</p>
     <p>Facere eaque eligendi totam libero natus ipsam debitis maxime suscipit distinctio id, placeat molestias cumque ex labore nulla quibusdam vero voluptatibus tempore reiciendis assumenda nisi voluptate recusandae velit. Optio, hic?</p>
     <p>Aliquam consequuntur cupiditate ducimus quia ex nihil alias accusantium neque odio, ipsum itaque. Cupiditate repellat maiores nobis odit eveniet. Recusandae dolorem ipsam ea optio nisi harum expedita commodi sequi nostrum!</p>
-<script>
-
-
-    function canviacolor(){
-        var par3=document.getElementById("paragraf3");
-        par3.style.color="red";
-    }
-    function canviatexte(){
-        var par1=document.getElementById("paragraf2");
-        par1.innerHTML="Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis <strong>quisquam</strong> placeat aspernatur? Ut cupiditate quam quidem ex iure!";
-    }
-
-    function canviafondo(){
-        var red=parseInt(Math.random()*255);
-        var green=parseInt(Math.random()*255);
-        var blue=parseInt(Math.random()*255);
-        document.body.style.backgroundColor="rgb("+red+","+green+","+blue+")";
-    }
-
-    var boton=document.getElementsByClassName("clase1");
-    boton.onmouseover=(canviafondo);
-    //boton.addEventListener("click",canviafondo);
-
-</script>
+    <script>
+        var boton=document.getElementById("cositas");
+        boton.addEventListener("mouseover",canviafondo);
+        boton.addEventListener("click",canviacolor);
+        boton.addEventListener("click",canviatexte);
+    </script>
 </body>
+
 </html>
