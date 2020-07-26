@@ -1,0 +1,29 @@
+.celda{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    outline:2px solid black;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.oculta{
+    background-color: gray;
+}
+.oculta span{
+    visibility:hidden;
+}
+.visible{
+    color:black;
+    background-color: white;
+}
+.visible span{
+    visibility:visible;
+}
+.mina{
+    background-color: #cd1e30;
+}
+.filaMinas{
+    width:100%;
+}
