@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* document.write(navigator.userAgent);
+        function veteaDisney(){
+            location.href="http://disney.com";
+        }
+        function veteaNetflix(){
+            location.href="http://netflix.com";
+        }
+        var edad=prompt("Indica tu edad");
+
+        if (edad<18){
+            veteaDisney();
+        }else{
+            veteaNetflix();
+        }
+        function veteaDisney(){
+            location.href="http://disney.com";
+        }
+        function mensaje(){
+            alert("hola, subscribite a mi canal");
+        }
+        function atras(){
+            history.go(-1);
+        }
+        setInterval(atras,1000);*/
+        
+    </script>
+    <button id="cositas" value="cambiame cositas">cambiame cositas</button>
+    <p id="paragraf1">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis qui necessitatibus accusantium, tempora voluptatem harum placeat libero repellat? Eveniet nulla dicta architecto! Ab ipsam sequi eum quam, unde similique.</p>
+    <p id="paragraf2">Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis quisquam placeat aspernatur? Ut cupiditate quam quidem ex iure!</p>
+    <p id="paragraf3" class="clase1">In a earum doloremque incidunt molestias ad. Distinctio illo cupiditate nulla dolorem rem deserunt quas in voluptatem hic aperiam ullam, quia architecto incidunt cum nam consequatur unde velit. Vitae, minus.</p>
+    <p>Eaque fugiat sit cum ex doloremque iusto ipsam distinctio ducimus quia, ut molestiae delectus animi sequi cumque tempore repudiandae. Nemo animi maiores non possimus qui molestiae veritatis delectus doloribus at.</p>
+    <p>Architecto, enim provident temporibus reprehenderit voluptates nihil accusantium voluptate dolorem fugit totam blanditiis quos ipsam obcaecati ipsa suscipit distinctio, inventore veniam. Vel beatae ea dolor quia aliquam debitis placeat sunt!</p>
+    <p>Voluptatibus laudantium voluptates officiis ipsum minima. Quaerat eum id beatae aspernatur odit optio quas vel, ullam doloribus eius quidem officia. Quia dicta quidem nam ex culpa, consequuntur eveniet officiis. Alias.</p>
+    <p>Eaque labore voluptatem omnis sit perspiciatis eius exercitationem amet corrupti cupiditate ea vitae vero commodi tenetur a consequatur qui, tempora neque saepe ab dolorum doloribus unde laborum. Repellendus, facilis quisquam?</p>
+    <p>Atque explicabo est sed eius amet veritatis illo obcaecati. Non, veritatis maiores iure doloribus labore praesentium similique! Quaerat voluptate sit unde nesciunt adipisci culpa sequi esse perspiciatis. Dignissimos, quasi veniam!</p>
+    <p>Facere eaque eligendi totam libero natus ipsam debitis maxime suscipit distinctio id, placeat molestias cumque ex labore nulla quibusdam vero voluptatibus tempore reiciendis assumenda nisi voluptate recusandae velit. Optio, hic?</p>
+    <p>Aliquam consequuntur cupiditate ducimus quia ex nihil alias accusantium neque odio, ipsum itaque. Cupiditate repellat maiores nobis odit eveniet. Recusandae dolorem ipsam ea optio nisi harum expedita commodi sequi nostrum!</p>
+<script>
+
+
+    function canviacolor(){
+        var par3=document.getElementById("paragraf3");
+        par3.style.color="red";
+    }
+    function canviatexte(){
+        var par1=document.getElementById("paragraf2");
+        par1.innerHTML="Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis <strong>quisquam</strong> placeat aspernatur? Ut cupiditate quam quidem ex iure!";
+    }
+
+    function canviafondo(){
+        var red=parseInt(Math.random()*255);
+        var green=parseInt(Math.random()*255);
+        var blue=parseInt(Math.random()*255);
+        document.body.style.backgroundColor="rgb("+red+","+green+","+blue+")";
+    }
+
+    var boton=document.getElementsByClassName("clase1");
+    boton.onmouseover=(canviafondo);
+    //boton.addEventListener("click",canviafondo);
+
+</script>
+</body>
+</html>
