@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+       <img src="img/homer.jpg" class="kk" width="250" height="250" alt="homer" id="homer"> 
+    </p>
+    <p><img src="img/bart.png" class="kk" width="250" height="250" alt="bart" id="bart"></p>
+    <p><img src="img/lisa.png" class="kk" width="250" height="250" alt="lisa" id="lisa"></p>
+    <p><img src="img/marge.jpg" class="kk" width="250" height="250" alt="marge" id="marge"></p>
+
+    <script>
+        function manejaDibujos(){
+            //var imgs=document.getElementsByClassName("kk"); //seleccionamos por clase
+            var imgs=document.querySelectorAll("img") //seleccionamos por etiqueta
+            for (let i=0;i<imgs.length;i++){
+                imgs[i].addEventListener("mouseover",crecer);
+                imgs[i].addEventListener("mouseout",decrecer);
+                imgs[i].addEventListener("click",mensaje)
+            }
+            
+        }
+        function crecer(evento){ //ponems evento para pasar el nombre de la imagen
+            evento.target.width=300;
+            evento.target.height=300;
+        }
+        function decrecer(evento){ //ponemos evento para pasar el nombre de la imagen
+            evento.target.width=250;
+            evento.target.height=250;
+        }
+        function mensaje(evento){
+            alert("hola, soy"+evento.target);
+        }
+        window.onload=manejaDibujos;
+    </script>
+</body>
+</html>

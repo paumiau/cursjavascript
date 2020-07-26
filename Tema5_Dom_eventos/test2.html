@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="parrafo1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione pariatur aliquid laboriosam hic cumque vitae earum illo laborum, tempore inventore placeat maiores rerum sapiente impedit labore corporis ducimus suscipit quibusdam!</li>
+        <li class="parrafo1">Aliquam nisi ipsum error architecto necessitatibus vero quos facilis qui itaque. Aliquid eveniet reiciendis ullam velit nesciunt! Nam quis maiores consequuntur quo accusamus fuga officiis, quisquam culpa expedita voluptatum ipsam.</li>
+        <li class="parrafo2">Sapiente harum commodi, voluptatibus sequi architecto est voluptatum illo natus facere magni, ratione iure, dolor expedita! Facere iusto esse iste. Obcaecati commodi hic est alias unde reprehenderit quo magnam facere.</li>
+        <li class="parrafo2">Non voluptatibus libero accusamus obcaecati accusantium vel, modi ad alias tenetur consectetur suscipit aut, tempora fugit aperiam dolorum cum, labore ratione. Itaque fugiat tempore eum in nesciunt repellat, sunt soluta?</li>
+        <li class="parrafo2">Perferendis aut repellendus voluptatum impedit magni velit debitis, provident qui obcaecati praesentium id laboriosam, voluptatem illum ipsum consequuntur tempora vitae. Iure blanditiis minus facere sapiente molestias cum quidem quo repellat?</li>
+    </ul>
+    <button onclick="modifica()">cambiame cosas</button>
+    <script>
+        function modifica(){
+            var parrafo1=document.getElementsByClassName("parrafo1");
+            //atencion al punto
+            var parrafo2=document.querySelectorAll(".parrafo2");
+            //tambien podemos seleccionar todos los que estan dentro de ul
+            var parrafos=document.querySelectorAll("ul li");
+            //pruebas cambiar parrafos individuales
+            //parrafo1[0].style.color="red";
+            //parrafos[2].style.color="green";
+            for (let i=0;i<parrafos.length;i++){
+                parrafos[i].style.color="red";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
