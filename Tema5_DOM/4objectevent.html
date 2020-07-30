@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function crecer(evento){ //ponems evento para pasar el nombre de la imagen
-            evento.target.width=300;
-            evento.target.height=300;
+        function crecer(obj){
+            obj.target.width=300;
+            obj.target.height=300;
         }
-        function decrecer(evento){ //ponemos evento para pasar el nombre de la imagen
-            evento.target.width=250;
-            evento.target.height=250;
+        function decrecer(obj){
+            obj.target.width=200;
+            obj.target.height=200;           
         }
-        function mensaje(evento){
-            alert("hola, soy "+evento.target.alt);
+        function mensaje(){
+            alert("Hola!")
+        }
+       // METODO 3
+       function inicializa(obj){
+            var imgs=document.querySelectorAll("img");
+            for (let i of imgs){
+                i.addEventListener("mouseover",crecer);
+                i.addEventListener("mouseout",decrecer);
+                i.addEventListener("click",mensaje);
+            }
         }
 
-        function inicializa(){
-            //var imgs=document.getElementsByClassName("kk"); //seleccionamos por clase
-            var imagenes=document.querySelectorAll("img") //seleccionamos por etiqueta
-            for (let imagen of imagenes){
-                imagen.addEventListener("mouseover",crecer);
-                imagen.addEventListener("mouseout",decrecer);
-                imagen.addEventListener("click",mensaje)
-            }
-            
-        }
         window.onload=inicializa;
+
     </script>
 </head>
-
 <body>
-    <p><img src="img/homer.jpg" class="kk" width="250" height="250" alt="Homer" id="homer"></p>
-    <p><img src="img/bart.png" class="kk" width="250" height="250" alt="Bart" id="bart"></p>
-    <p><img src="img/lisa.png" class="kk" width="250" height="250" alt="Lisa" id="lisa"></p>
-    <p><img src="img/marge.jpg" class="kk" width="250" height="250" alt="Marge" id="marge"></p>
+    <p><img src="img/homer.jpg"  width="200" height="200" alt="" id="homer"></p>
+    <p><img src="img/bart.png" width="200" height="200" alt=""></p>
+    <p><img src="img/lisa.png" width="200" height="200" alt=""></p>
+    <p><img src="img/marge.jpg" width="200" height="200" alt=""></p>
+    <p><img src="img/pikachu.png" width="200" height="200" alt=""></p>
 </body>
 </html>

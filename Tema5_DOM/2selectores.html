@@ -6,48 +6,30 @@
     <title>Document</title>
     <script>
         function modifica(){
-            //seleccion por clases
-            var parrafos1=document.getElementsByClassName("parrafo1");
+                //seleccion por clases
+                //var paragrafs=document.getElementsByClassName("paragraf2");
 
-            //seleccion por metodos CSS
-            //Seleccionamos por clase
-            var parrafos2=document.querySelectorAll(".parrafo2");
-            //tambien podemos seleccionar todos los que estan dentro de ul
-            var parrafos=document.querySelectorAll("ul li");
-            //tambien podemos seleccionar por id con #
-            var parrafines=document.querySelectorAll("#parrafin");
+                //seleccio per CSS
+                var paragrafs=document.querySelectorAll("#id1");
 
-            //pruebas cambiar parrafos individuales
-            //parrafo1[0].style.color="red";
-            //parrafos[2].style.color="green";
-
-            //recorriendo el array 
-            /*
-            for (let i=0;i<parrafines.length;i++){
-                parrafines[i].style.color="red";
+           /* for (let i=0;i<paragrafs.length;i++){
+                paragrafs[i].style.color="red";
             }*/
-            
-            //recorriendo el array con un for of
-            for (let parfs of parrafines){
-                parfs.style.color="red";
+
+            for (let parfs of paragrafs){
+                parfs.style.color="blue";
             }
         }
-        function comienza(){
-            var boton=document.getElementById("cositas");
-            boton.addEventListener("click",modifica);
-        }
-        window.onload=comienza;
     </script>
-
 </head>
 <body>
     <ul>
-        <li class="parrafo1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione pariatur aliquid laboriosam hic cumque vitae earum illo laborum, tempore inventore placeat maiores rerum sapiente impedit labore corporis ducimus suscipit quibusdam!</li>
-        <li class="parrafo1">Aliquam nisi ipsum error architecto necessitatibus vero quos facilis qui itaque. Aliquid eveniet reiciendis ullam velit nesciunt! Nam quis maiores consequuntur quo accusamus fuga officiis, quisquam culpa expedita voluptatum ipsam.</li>
-        <li class="parrafo2" id="parrafin">Sapiente harum </li>
-        <li class="parrafo2">Non voluptatibus libero accusamus obcaecati accusantium vel, modi ad alias tenetur consectetur suscipit aut, tempora fugit aperiam dolorum cum, labore ratione. Itaque fugiat tempore eum in nesciunt repellat, sunt soluta?</li>
-        <li class="parrafo2">Perferendis aut repellendus voluptatum impedit magni velit debitis, provident qui obcaecati praesentium id laboriosam, voluptatem illum ipsum consequuntur tempora vitae. Iure blanditiis minus facere sapiente molestias cum quidem quo repellat?</li>
+        <li class="paragraf1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sit blanditiis dolor minus, tempore et maiores quibusdam id corrupti itaque fuga porro tempora soluta dicta quisquam eius modi quaerat eaque?</li>
+        <li class="paragraf1" id="id1">Animi recusandae quod suscipit pariatur quasi, ratione, maiores ea aut vitae deleniti, omnis quis ullam dolorum saepe aliquid quam est quae debitis molestias perspiciatis! Perspiciatis doloribus tempora cum qui quas?</li>
+        <li class="paragraf2">Cupiditate expedita perspiciatis iste. Voluptates placeat quas fuga nostrum sequi repellat vitae omnis nemo. Laudantium neque voluptatibus expedita nisi explicabo voluptatem ducimus saepe placeat aspernatur adipisci, reiciendis est in officiis?</li>
+        <li class="paragraf2">Corrupti enim molestiae voluptatibus quis nam et vitae maxime sequi eveniet, esse dolores est dolorem? Esse consequatur aspernatur temporibus rem ex accusamus, exercitationem sit ratione expedita numquam aut? Cumque, explicabo?</li>
+        <li class="paragraf2" id="id2">Quod suscipit modi veritatis in et ut adipisci deleniti eius itaque repellendus magnam recusandae, voluptates explicabo illum eos sapiente eum voluptatem corrupti provident molestias consectetur, nisi, nihil veniam magni? Nemo.</li>
     </ul>
-    <button id="cositas" value="cambiame cositas">cambiame cositas</button>
+    <button id="cositas" value="cambiame cositas" onclick="modifica()">cambiame cositas</button>
 </body>
 </html>

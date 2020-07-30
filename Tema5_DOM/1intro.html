@@ -26,9 +26,6 @@
                 }else{
                     veteaNetflix();
                 }
-                function veteaDisney(){
-                    location.href="http://disney.com";
-                }
             }
         
         //pruebas con el setInterval y setTimeOut
@@ -39,7 +36,7 @@
                 history.go(-1);
             }
             function mensaje5segundos(){
-                setInterval(mensaje,5000);
+                setTimeout(mensaje,5000);
             }
 
         // Eventos con onmouseover y con onclick
@@ -48,8 +45,8 @@
                 par3.style.color="red";
             }
             function canviatexte(){
-                var par1=document.getElementById("paragraf2");
-                par1.innerHTML="Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis <strong>quisquam</strong> placeat aspernatur? Ut cupiditate quam quidem ex iure!";
+                var par1=document.getElementById("paragraf1");
+                par1.innerHTML="Como estan ustedes!!??";
             }
 
             function canviafondo(){
@@ -60,6 +57,8 @@
             }
 
     </script>
+
+    <!-- HTML-->
     <button id="cositas" value="cambiame cositas">cambiame cositas</button>
     <p id="paragraf1">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis qui necessitatibus accusantium, tempora voluptatem harum placeat libero repellat? Eveniet nulla dicta architecto! Ab ipsam sequi eum quam, unde similique.</p>
     <p id="paragraf2">Consequatur explicabo iure quo itaque cumque. Praesentium molestias, adipisci eaque odit ipsa beatae delectus, ducimus, ex vitae unde nulla molestiae blanditiis quisquam placeat aspernatur? Ut cupiditate quam quidem ex iure!</p>
@@ -73,7 +72,7 @@
     <p>Aliquam consequuntur cupiditate ducimus quia ex nihil alias accusantium neque odio, ipsum itaque. Cupiditate repellat maiores nobis odit eveniet. Recusandae dolorem ipsam ea optio nisi harum expedita commodi sequi nostrum!</p>
     <script>
         var boton=document.getElementById("cositas");
-        boton.addEventListener("mouseover",canviafondo);
+        boton.addEventListener("mousemove",canviafondo);
         boton.addEventListener("click",canviacolor);
         boton.addEventListener("click",canviatexte);
     </script>

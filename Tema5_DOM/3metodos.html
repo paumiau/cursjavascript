@@ -4,54 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-
-        function crecer(){
-            pika.width=300;
-            pika.height=300;
-        }
-        function decrecer(){
-            pika.width=200;
-            pika.height=200;
-        }
-        function mensaje(){
-            alert("hola, soy picachu");
-        }
-        function mensaje2(){
-            alert("hola, soy tu padre");
-        }
-
-        /*METODO 2
-        function inicializa2(){
-            var pika=document.getElementById("pika");
-            pika.onmouseover=crecer;
-            pika.onmouseout=decrecer;
-            pika.onclick=mensaje;
-        }
-        window.onload=inicializa2;*/
-
-        //METODO 3
-        function inicializa3(){
-            pika=document.getElementById("pika");
-            pika.addEventListener("mouseover",crecer);
-            pika.addEventListener("mouseout",decrecer);
-            pika.addEventListener("click",mensaje)
-            pika.addEventListener("click",mensaje2)
-        }
-        window.onload=inicializa3;
-    </script>
-</body>
+    <script src="js/3accion.js"></script>
 </head>
+
 <body>
-    <!--METODO 1
-    <img src="img/pikachu.png" id="pika" width="200" height="200" onmouseover="crecer" onmouseout="decrecer" onclick="mensaje">
-    -->
+    <!-- Metodo 1
+    <img src="img/pikachu.png" id="pika" alt="pikachu" width="200" height="200" onmouseover="crecer()" onmouseout="decrecer()" onclick="mensaje()">-->
+    <!-- Metodo 2 i 3-->
+    <img src="img/pikachu.png" id="pika" alt="pikachu" width="200" height="200">
+</body>
 
-    <!--METODO 2
-    <img src="img/pikachu.png" id="pika" width="200" height="200">
-     -->
-
-     <!--METODO 3-->
-    <img src="img/pikachu.png" id="pika" width="200" height="200">
-     
-    </html>
+</html>
