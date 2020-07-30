@@ -22,36 +22,36 @@ async function dispara() {
     //alert ( window.innerWidth)
     let heli=document.getElementById("helicoptero");
     let disparo=document.getElementById("disparo");
-    disparo.style.visibility="visible";
+    disparo.style.visibility="visible"; //Hago visible el disparo
     disparoX=heli.offsetLeft+10;
     disparoY=heli.offsetTop+20;
-    for (disparoIni=disparoX;disparoX<disparoIni+1000;disparoX=disparoX+5){
+    for (disparoIni=disparoX;disparoX<window.innerWidth;disparoX=disparoX+5){ //hago que se mueva en horizontal
         await sleep(1);
         disparo.style.left=disparoX+"px";
         disparo.style.top=disparoY+"px";
     }
-    disparo.style.visibility="hidden";
+    disparo.style.visibility="hidden"; //lo vuelvo a esconder
 }
 
 async function mueveTrump() {
-    let fin=false;
+    let fin=false; 
     let trump=document.getElementById("trump");
     let disparo=document.getElementById("disparo");
     let heli=document.getElementById("helicoptero");
-    let direcX=5;
+    let direcX=5; //marco las direcciones irá hacia la derecha y hacia arriba
     let direcY=-5;
 
 
-    while (fin==false){
-        trumpPos = trump.getBoundingClientRect();
+    while (fin==false){  //Se ha acabado el juego?
+        trumpPos = trump.getBoundingClientRect(); //utilizo este objeto que nos da las esquinas de los dibujos
         disparoPos = disparo.getBoundingClientRect();
         heliPos = heli.getBoundingClientRect();
 
-        trump.style.left=trump.offsetLeft+direcX+"px";
+        trump.style.left=trump.offsetLeft+direcX+"px"; //muevo al trump
         trump.style.top=trump.offsetTop+direcY+"px";
-        await sleep(1);
+        await sleep(1); //Pausa
 
-        console.log(trumpPos.left+" "+trumpPos.right);
+        // console.log(trumpPos.left+" "+trumpPos.right); //Para hacer pruebas
         
         //comprueba si hay colision de trump con el helicoptero
         if (trumpPos.left+50<= heliPos.right && trumpPos.right-50>= heliPos.left &&
@@ -71,26 +71,26 @@ async function mueveTrump() {
         //movemos al trump
         //trumpX=trump.offsetLeft;
         //trumpY=trump.offsetTop;
-        if (trumpPos.right>=window.innerWidth) {
+        if (trumpPos.right>=window.innerWidth) { //si toca el borde derecho
             direcX=-5;
-            trump.style.backgroundImage="url('img/trumpL.png')";
+            trump.style.backgroundImage="url('img/trumpL.png')"; //le doy la vuelta al trump
         }
-        if (trumpPos.left<=0) {
+        if (trumpPos.left<=0) { //si toca el borde izquierdo
             direcX=5;
             trump.style.backgroundImage="url('img/trumpR.png')";
         }
-        if (trumpPos.bottom>=window.innerHeight) direcY=-5
+        if (trumpPos.bottom>=window.innerHeight) direcY=-5 //si toca los bordes superiores
         if (trumpPos.top<=0) direcY=5
 
     }
 }
 
 
-function sleep(ms) {
+function sleep(ms) {  //Funcion para hacer pausa
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-function inicializa(){
+function inicializa(){ //empezamos!
     document.body.addEventListener("keydown",mueve);
     mueveTrump();
 }
