@@ -12,7 +12,7 @@ function mensaje(){
 function mensaje2(){
     alert("Hola Soy tu padre")
 }
-
+/*
 //METODO 2
 
 function inicializa(){
@@ -20,7 +20,7 @@ function inicializa(){
     pika.onmouseover=crecer;
     pika.onmouseout=decrecer;
     pika.onclick=mensaje;
-}
+}*/
 
 //METODO 3
 function inicializa(){
